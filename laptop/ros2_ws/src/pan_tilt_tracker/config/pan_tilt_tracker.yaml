@@ -1,0 +1,56 @@
+/**:
+  ros__parameters:
+    detection_topic: /detections
+    pan_tilt_cmd_topic: /pan_tilt_cmd
+
+    use_image_topic_size: true
+    image_topic_for_size: /inference/image_raw
+    image_width: 320
+    image_height: 240
+
+    hfov_deg: 68.3
+    vfov_deg: 53.9
+
+    control_mode: absolute_xy
+    camera_rotated_180: true
+    pan_sign: 1.0
+    tilt_sign: 1.0
+
+    target_class_id: "0"
+
+    base_pan_deg: -10.0
+    base_tilt_deg: 0.0
+
+    pan_offset_deg: 10.0
+    tilt_offset_deg: 0.0
+
+    kp_pan: 2.0
+    kp_tilt: 2.0
+    k_gain_pan: 0.8
+    k_gain_tilt: 0.8
+
+    use_directional_damping: true
+    k_gain_pan_dir8:  [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    k_gain_tilt_dir8: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+    neg_pan_threshold_deg: -1.0
+    neg_pan_damping_mult: 1.0
+    pos_pan_damping_mult: 1.0
+
+    edge_damping_pan: 0.0
+    edge_damping_tilt: 0.0
+
+    use_smoothing: true
+    smoothing_factor: 0.35
+    max_pan_speed_deg_per_sec: 120.0
+    max_tilt_speed_deg_per_sec: 120.0
+
+    pan_min_deg: -90.0
+    pan_max_deg:  90.0
+    tilt_min_deg: -20.0
+    tilt_max_deg:  20.0
+
+    target_distance_m: 0.5
+    dist_points: []
+    pan_offset_points: []
+    tilt_offset_points: []
