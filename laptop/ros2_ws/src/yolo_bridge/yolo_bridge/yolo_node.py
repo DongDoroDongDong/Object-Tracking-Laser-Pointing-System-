@@ -42,8 +42,14 @@ class YoloBridgeNode(Node):
         self.get_logger().info(f'Detections topic   : {detections_topic}')
         self.get_logger().info(f'Loading YOLOv5 model: {model_name}')
 
-        self.model = torch.hub.load('ultralytics/yolov5', model_name, pretrained=True,
-                                    path='../../../../../weight/yolov5n.pt')
+        
+        self.model = torch.hub.load(
+                                    '/absolute/path/to/yolov5',
+                                    'custom',
+                                    path='../../../../../weight/yolov5n.pt',
+                                    source='local'
+                                )
+
         self.model.to('cpu')
         self.model.eval()
 
